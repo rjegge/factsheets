@@ -10,7 +10,7 @@
   }
   
   body {
-    font-family: "HouschkaAltPro-Medium", Arial, sans-serif;
+    font-family: 'Oswald', sans-serif;  
   }
   
   .purple {
@@ -48,17 +48,20 @@
   
   /*---------------------------- END BASIC STYLES -----------------------*/
   
-  
-  /* Add your custom css below! */
+  /*---------------------------- FACTSHEET STYLES -----------------------*/
+
 
 
   .factsheet {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: minmax(60px, 200px) 2fr;
     grid-template-rows: auto auto;
-    width: 800px;
+    grid-column-gap: 2em;
+    grid-row-gap: 0em;
+    max-width: 800px;
     margin: auto;
+    padding: 0px 40px 0px 20px;
   }
 
   header {
@@ -66,9 +69,16 @@
       grid-row: 1;
   }
 
-  nav {
-    grid-column: 1 / 2;
-    grid-row: 2;
+  header > h1 {
+    margin: 1em 0px 0.5em 0px; 
+    padding: 0px 0px 0px 0px;
+  }
+
+  header > p {
+    font-size: 0.8em;
+    font-style: italic;
+    margin: 0px 0px 5px 0px; 
+    padding: 0px 0px 0px 0px;
   }
 
   article {
@@ -79,7 +89,14 @@
   .factsheet h2 {
     color: #4A0D66;
     padding-top: 16px;
+    margin-top: 2em;
     border-top: 8px solid #34D9C3;
+  }
+
+  .fs-caption {
+    color: #4A0D66;
+    text-align: center;
+    font-size: 1.3em;
   }
 
   article p {
@@ -90,8 +107,45 @@
   }
 
   img {
-      width: 600px;
-      display: flex;
-      justify-content: center;
-      align-items: center;  
+      max-width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .pie-chart {
+    max-width: 60%;
+  }
+
+    /* ------------------ Navigation Styles ------------------ */
+
+    nav {
+      grid-column: 1 / 2;
+      grid-row: 2;
+    }
+  
+    nav > ul {
+      list-style-type: none;
+      text-align: right;
+      padding: 0px 12px 0px 0px;
+      margin: 80px 1em 0px 0px;
+      border-right: .5px solid rgb(213, 235, 232);
+    }
+
+    nav > ul > li {
+      list-style-type: none;
+      padding: .5em;
+      margin: 0;
+    }
+    
+    nav > ul > li > a {
+      color: #4A0D66;
+      text-decoration: none; 
+    }
+
+    nav > ul > li > a:hover {      
+      margin: 0px;
+      text-decoration: none; 
+      color: #FFA400;
+      transition: color 0.2s;
     }
