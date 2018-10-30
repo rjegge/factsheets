@@ -1,0 +1,97 @@
+/*---------------------------- ALZIMPACT BRAND FONT AND COLORS -----------------------*/
+@font-face {
+    font-family: 'HouschkaAltPro-Medium';
+    src: url('/css/font/HouschkaAltPro-Medium.eot'); /* IE9 Compat Modes */
+    src: url('/css/font/HouschkaAltPro-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/css/font/HouschkaAltPro-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+      url('/css/font/HouschkaAltPro-MediumItalic.woff') format('woff'),
+      url('/css/font/HouschkaAltPro-MediumItalic.eot'),
+      url('/css/font/HouschkaAltPro-MediumItalic.woff2') format('woff2')
+  }
+  
+  body {
+    font-family: "HouschkaAltPro-Medium", Arial, sans-serif;
+  }
+  
+  .purple {
+    color: #4A0D66;
+  }
+  
+  .gold {
+    color: #FFA400;
+  }
+  
+  .teal {
+    color: #34D9C3;
+  }
+  
+  .dark-gray {
+    color: #58595B;
+  }
+  
+  .gray {
+    color: #BCBEC0;
+  }
+  
+  .light-gray {
+    color: #F1F2F2;
+  }
+  
+  a {
+    color: #FFA400;
+  }
+  
+  a:hover {
+    color: #4A0D66;
+    text-decoration: none;
+  }
+  
+  /*---------------------------- END BASIC STYLES -----------------------*/
+  
+  
+  /* Add your custom css below! */
+
+
+  .factsheet {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    width: 800px;
+    margin: auto;
+  }
+
+  header {
+      grid-column: 2 / 3;
+      grid-row: 1;
+  }
+
+  nav {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+
+  article {
+    grid-column: 2 / 3;
+    grid-row: 2;
+  }
+
+  .factsheet h2 {
+    color: #4A0D66;
+    padding-top: 16px;
+    border-top: 8px solid #34D9C3;
+  }
+
+  article p {
+    display: list-item;          /* This has to be "list-item"                                               */
+    list-style-type: square;       /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type     */
+    list-style-position: outside;
+    margin-left: 1em;
+  }
+
+  img {
+      width: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+    }
